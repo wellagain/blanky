@@ -1,0 +1,28 @@
+@use '../config';
+@use '../tools';
+
+
+.header__container {
+  @extend %shadowbox;
+  text-align: center;
+}
+
+.header {
+  @extend %centered;
+  padding-top: config.$rhythm;
+  padding-bottom: config.$rhythm;
+  max-width: config.$container;
+
+  h1 {
+    margin: 0;
+    line-height: .5;
+  }
+}
+
+.navigation {
+  text-align: right;
+
+  a {
+    margin-left: 2em;
+  }
+}

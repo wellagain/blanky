@@ -1,0 +1,14 @@
+@use '../config';
+@use '../tools';
+
+
+.footer__container {
+  background: config.$black;
+  padding: 1em;
+  color: config.$white;
+}
+
+.footer {
+  @extend %centered;
+  max-width: config.$container;
+}

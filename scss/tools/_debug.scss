@@ -1,0 +1,54 @@
+@use 'sass:map';
+@use 'responsive';
+@use '../config/breakpoints';
+@use '../config/var';
+@use 'position';
+
+// Responsive colored border to an element for easy element debugging
+// use:
+// @include debug;
+
+// default colors for debug
+$debug-colors: (
+  'default':        #b1b1b1,
+  'mobile-down':    #a20a00,
+  'portrait-down':  #ff6100,
+  'portrait':       #b59f33,
+  'tablet':         #00b91f,
+  'desktop':        #3981ff,
+  'huge-up':        #6617ff,
+  'widescreen':     #a20086,
+);
+
+@mixin debug($naming: false) {
+  border: solid 1px map.get($debug-colors, default);
+
+  @if($naming == true) {
+    &::after {
+      @include position.position(absolute, 100% 0 auto auto, 100);
+      display: inline-block;
+      background: map.get($debug-colors, default);
+      padding: .2em .5em;
+      color: var.$white;
+      font-size: .8rem;
+      content: 'default';
+    }
+  }
+
+  @each $screenname, $query in breakpoints.$breakpoints {
+    @if $screenname == null {
+      @error 'No responsiveness found';
+    } @else {
+      @include responsive.breakpoint(#{$screenname}) {
+        border-color: map.get($debug-colors, $screenname);
+
+        @if($naming == true) {
+          &::after {
+            background: map.get($debug-colors, $screenname);
+            content: '#{$screenname}';
+          }
+        }
+      }
+    }
+  }
+}

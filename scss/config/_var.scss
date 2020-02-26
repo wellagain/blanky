@@ -1,0 +1,19 @@
+@use 'sass:color';
+
+
+$leading:     1.5;
+
+$rhythm:      #{1.5 * $leading + 'em'};
+
+
+
+$white:       #ffffff;
+$black:       #2c3031;
+$link:        #1c6d81;
+
+
+$shadow: 0 5px 5px 0 color.scale($black, $alpha: -90%);
+
+
+$container:   1200px;
+$copywidth:   55ch

@@ -1,0 +1,49 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:string';
+@use 'utils';
+
+
+$font-extensions: eot svg woff ttf; // possible formats eot, woff2, woff, otf, ttf, svg
+
+@mixin font-face(
+  $font-url,
+  $version,
+  $name,
+  $weight: string.unquote('normal'),
+  $style: string.unquote('normal'),
+  $extensions: $font-extensions
+) {
+  @font-face {
+    $url: null;
+
+    $mods: (
+      eot: '?' + $version,
+      woff2: '?' + $version,
+      woff: '?' + $version,
+      otf: '?' + $version,
+      ttf: '?' + $version,
+      svg: '?' + $version + '#' + utils.str-replace($name, ' ', '_')
+    );
+
+    $font-formats: (
+      woff: 'woff',
+      otf: 'opentype',
+      ttf: 'truetype',
+      svg: 'svg'
+    );
+
+    @each $extension in $extensions {
+      $mod: if(map.has-key($mods, $extension), map.get($mods, $extension), $extension);
+
+      $font-format: if(map.has-key($font-formats, $extension), map.get($font-formats, $extension), $extension);
+
+      $url: list.append($url, url(string.quote($font-url + '.' + $extension + $mod)) format(string.quote($font-format)), comma);
+    }
+
+    font-family: string.quote($name);
+    font-weight: $weight;
+    font-style: $style;
+    src: $url;
+  }
+}

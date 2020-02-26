@@ -1,0 +1,26 @@
+@use '../tools';
+@use 'var';
+
+%shadowbox {
+  box-shadow: var.$shadow;
+  background: var.$white;
+  color: var.$black;
+}
+
+%centered {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: left;
+
+  @include tools.breakpoint(desktop-down) {
+    width: 90%;
+  }
+
+  @include tools.breakpoint(portrait-down) {
+    padding-right: 1em;
+    padding-left: 1em;
+    width: calc(100% - 2em);
+    max-width: none;
+  }
+}

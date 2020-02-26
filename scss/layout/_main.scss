@@ -1,0 +1,13 @@
+@use '../config';
+@use '../tools';
+
+.content__container {
+  text-align: center;
+  margin-top: config.$rhythm;
+  margin-bottom: config.$rhythm;
+}
+
+.content {
+  @extend %centered;
+  @extend %copy;
+}

@@ -1,0 +1,76 @@
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:meta';
+@use 'sass:string';
+
+// check if a number is integer
+@function is-integer($number) {
+  @if math.round($number) == $number {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+// reverse a list
+// credit: http://hugogiraudel.com/2013/08/08/advanced-sass-list-functions/
+@function reverse($list, $recursive: false) {
+  $result: ();
+
+  @for $i from list.length($list) * -1 through -1 {
+    @if meta.type-of(list.nth($list, math.abs($i))) == list and $recursive {
+      $result: list.append($result, reverse(list.nth($list, math.abs($i)), $recursive));
+    } @else {
+      $result: list.append($result, list.nth($list, math.abs($i)));
+    }
+  }
+
+  @return $result;
+}
+
+// calculate all integer dividers of an integer
+@function get-dividers($number) {
+  $result: ();
+
+  @for $i from 1 through $number {
+    $val: $number / $i;
+
+    @if is-integer($val) == true {
+      $result: list.append($result, $val, comma);
+    }
+  }
+
+  @return $result;
+}
+
+@function strip-unit($number) {
+  @if meta.type-of($number) == 'number' and not math.is-unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// https://www.sassmeister.com/gist/1b4f2da5527830088e4d
+@function str-replace(
+  $string,
+  $search,
+  $replace: ''
+) {
+  $index: string.index($string, $search);
+
+  @if $index {
+    @return string.slice($string, 1, $index - 1) + $replace + str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// Map deep get
+// @author Hugo Giraudel
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}

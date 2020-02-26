@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use '../config/iconfont';
+
+
+@function icon($key) {
+  @if map.has-key(iconfont.$icons, $key) {
+    @return map.get(iconfont.$icons, $key);
+  }
+
+  @warn 'Unknown `#{$key}` in $icons.';
+  @return null;
+}
+
+
+// generate all icons as classes
+
+@mixin output-icons() {
+  [class*='ico-']::before {
+    @extend %icon;
+  }
+
+  @each $icon, $value in iconfont.$icons {
+    .ico-#{$icon}::before {
+      content: icon($icon);
+    }
+  }
+}
+
+
+// icon placeholder
+
+%icon {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  font-family: 'icon';
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  speak: none;
+}

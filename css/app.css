@@ -1,0 +1,1715 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif:400,400i&display=swap");
+[class*=ico-]::before {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  font-family: "icon";
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  speak: none;
+}
+
+@font-face {
+  font-family: "icon";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/entypo.eot?v1") format("eot"), url("../fonts/entypo.svg?v1#icon") format("svg"), url("../fonts/entypo.woff?v1") format("woff"), url("../fonts/entypo.ttf?v1") format("truetype");
+}
+body {
+  font-family: "Noto Serif", Times, serif;
+  line-height: 1.5;
+}
+@media (max-width: 1280px) {
+  body {
+    font-size: 0.875em;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 0.8em;
+  }
+}
+
+a {
+  text-decoration: underline;
+  color: #1c6d81;
+}
+a:hover, a:focus, a:active {
+  text-decoration: underline;
+  color: #1c6d81;
+}
+a:focus {
+  outline: 0;
+}
+
+.content {
+  font-size: 1.5em;
+  max-width: 55ch;
+}
+.content p {
+  margin-bottom: 1.5;
+  hanging-punctuation: first;
+}
+
+h1 {
+  margin-top: 2.25em;
+  font-size: 3em;
+}
+
+h2 {
+  margin-top: 2.25em;
+  font-size: 2.25em;
+}
+
+h3 {
+  margin-top: 2.25em;
+  font-size: 1.8em;
+}
+
+.ico-add-to-list::before {
+  content: "";
+}
+
+.ico-classic-computer::before {
+  content: "";
+}
+
+.ico-controller-fast-backward::before {
+  content: "";
+}
+
+.ico-creative-commons-attribution::before {
+  content: "";
+}
+
+.ico-creative-commons-noderivs::before {
+  content: "";
+}
+
+.ico-creative-commons-noncommercial-eu::before {
+  content: "";
+}
+
+.ico-creative-commons-noncommercial-us::before {
+  content: "";
+}
+
+.ico-creative-commons-public-domain::before {
+  content: "";
+}
+
+.ico-creative-commons-remix::before {
+  content: "";
+}
+
+.ico-creative-commons-share::before {
+  content: "";
+}
+
+.ico-creative-commons-sharealike::before {
+  content: "";
+}
+
+.ico-creative-commons::before {
+  content: "";
+}
+
+.ico-document-landscape::before {
+  content: "";
+}
+
+.ico-remove-user::before {
+  content: "";
+}
+
+.ico-warning::before {
+  content: "";
+}
+
+.ico-arrow-bold-down::before {
+  content: "";
+}
+
+.ico-arrow-bold-left::before {
+  content: "";
+}
+
+.ico-arrow-bold-right::before {
+  content: "";
+}
+
+.ico-arrow-bold-up::before {
+  content: "";
+}
+
+.ico-arrow-down::before {
+  content: "";
+}
+
+.ico-arrow-left::before {
+  content: "";
+}
+
+.ico-arrow-long-down::before {
+  content: "";
+}
+
+.ico-arrow-long-left::before {
+  content: "";
+}
+
+.ico-arrow-long-right::before {
+  content: "";
+}
+
+.ico-arrow-long-up::before {
+  content: "";
+}
+
+.ico-arrow-right::before {
+  content: "";
+}
+
+.ico-arrow-up::before {
+  content: "";
+}
+
+.ico-arrow-with-circle-down::before {
+  content: "";
+}
+
+.ico-arrow-with-circle-left::before {
+  content: "";
+}
+
+.ico-arrow-with-circle-right::before {
+  content: "";
+}
+
+.ico-arrow-with-circle-up::before {
+  content: "";
+}
+
+.ico-bookmark::before {
+  content: "";
+}
+
+.ico-bookmarks::before {
+  content: "";
+}
+
+.ico-chevron-down::before {
+  content: "";
+}
+
+.ico-chevron-left::before {
+  content: "";
+}
+
+.ico-chevron-right::before {
+  content: "";
+}
+
+.ico-chevron-small-down::before {
+  content: "";
+}
+
+.ico-chevron-small-left::before {
+  content: "";
+}
+
+.ico-chevron-small-right::before {
+  content: "";
+}
+
+.ico-chevron-small-up::before {
+  content: "";
+}
+
+.ico-chevron-thin-down::before {
+  content: "";
+}
+
+.ico-chevron-thin-left::before {
+  content: "";
+}
+
+.ico-chevron-thin-right::before {
+  content: "";
+}
+
+.ico-chevron-thin-up::before {
+  content: "";
+}
+
+.ico-chevron-up::before {
+  content: "";
+}
+
+.ico-chevron-with-circle-down::before {
+  content: "";
+}
+
+.ico-chevron-with-circle-left::before {
+  content: "";
+}
+
+.ico-chevron-with-circle-right::before {
+  content: "";
+}
+
+.ico-chevron-with-circle-up::before {
+  content: "";
+}
+
+.ico-cloud::before {
+  content: "";
+}
+
+.ico-controller-fast-forward::before {
+  content: "";
+}
+
+.ico-controller-jump-to-start::before {
+  content: "";
+}
+
+.ico-controller-next::before {
+  content: "";
+}
+
+.ico-controller-paus::before {
+  content: "";
+}
+
+.ico-controller-play::before {
+  content: "";
+}
+
+.ico-controller-record::before {
+  content: "";
+}
+
+.ico-controller-stop::before {
+  content: "";
+}
+
+.ico-rhombus::before {
+  content: "";
+}
+
+.ico-controller-volume::before {
+  content: "";
+}
+
+.ico-dot-single::before {
+  content: "";
+}
+
+.ico-dots-three-horizontal::before {
+  content: "";
+}
+
+.ico-dots-three-vertical::before {
+  content: "";
+}
+
+.ico-dots-two-horizontal::before {
+  content: "";
+}
+
+.ico-dots-two-vertical::before {
+  content: "";
+}
+
+.ico-download::before {
+  content: "";
+}
+
+.ico-emoji-flirt::before {
+  content: "";
+}
+
+.ico-flow-branch::before {
+  content: "";
+}
+
+.ico-flow-cascade::before {
+  content: "";
+}
+
+.ico-flow-line::before {
+  content: "";
+}
+
+.ico-flow-parallel::before {
+  content: "";
+}
+
+.ico-flow-tree::before {
+  content: "";
+}
+
+.ico-install::before {
+  content: "";
+}
+
+.ico-layers::before {
+  content: "";
+}
+
+.ico-open-book::before {
+  content: "";
+}
+
+.ico-resize-100::before {
+  content: "";
+}
+
+.ico-resize-full-screen::before {
+  content: "";
+}
+
+.ico-save::before {
+  content: "";
+}
+
+.ico-select-arrows::before {
+  content: "";
+}
+
+.ico-sound-mute::before {
+  content: "";
+}
+
+.ico-sound::before {
+  content: "";
+}
+
+.ico-trash::before {
+  content: "";
+}
+
+.ico-triangle-down::before {
+  content: "";
+}
+
+.ico-triangle-left::before {
+  content: "";
+}
+
+.ico-triangle-right::before {
+  content: "";
+}
+
+.ico-triangle-up::before {
+  content: "";
+}
+
+.ico-uninstall::before {
+  content: "";
+}
+
+.ico-upload-to-cloud::before {
+  content: "";
+}
+
+.ico-upload::before {
+  content: "";
+}
+
+.ico-add-user::before {
+  content: "";
+}
+
+.ico-address::before {
+  content: "";
+}
+
+.ico-adjust::before {
+  content: "";
+}
+
+.ico-air::before {
+  content: "";
+}
+
+.ico-aircraft-landing::before {
+  content: "";
+}
+
+.ico-aircraft-take-off::before {
+  content: "";
+}
+
+.ico-aircraft::before {
+  content: "";
+}
+
+.ico-align-bottom::before {
+  content: "";
+}
+
+.ico-align-horizontal-middle::before {
+  content: "";
+}
+
+.ico-align-left::before {
+  content: "";
+}
+
+.ico-align-right::before {
+  content: "";
+}
+
+.ico-align-top::before {
+  content: "";
+}
+
+.ico-align-vertical-middle::before {
+  content: "";
+}
+
+.ico-archive::before {
+  content: "";
+}
+
+.ico-area-graph::before {
+  content: "";
+}
+
+.ico-attachment::before {
+  content: "";
+}
+
+.ico-awareness-ribbon::before {
+  content: "";
+}
+
+.ico-back-in-time::before {
+  content: "";
+}
+
+.ico-back::before {
+  content: "";
+}
+
+.ico-bar-graph::before {
+  content: "";
+}
+
+.ico-battery::before {
+  content: "";
+}
+
+.ico-beamed-note::before {
+  content: "";
+}
+
+.ico-bell::before {
+  content: "";
+}
+
+.ico-blackboard::before {
+  content: "";
+}
+
+.ico-block::before {
+  content: "";
+}
+
+.ico-book::before {
+  content: "";
+}
+
+.ico-bowl::before {
+  content: "";
+}
+
+.ico-box::before {
+  content: "";
+}
+
+.ico-briefcase::before {
+  content: "";
+}
+
+.ico-browser::before {
+  content: "";
+}
+
+.ico-brush::before {
+  content: "";
+}
+
+.ico-bucket::before {
+  content: "";
+}
+
+.ico-cake::before {
+  content: "";
+}
+
+.ico-calculator::before {
+  content: "";
+}
+
+.ico-calendar::before {
+  content: "";
+}
+
+.ico-camera::before {
+  content: "";
+}
+
+.ico-ccw::before {
+  content: "";
+}
+
+.ico-chat::before {
+  content: "";
+}
+
+.ico-check::before {
+  content: "";
+}
+
+.ico-circle-with-cross::before {
+  content: "";
+}
+
+.ico-circle-with-minus::before {
+  content: "";
+}
+
+.ico-circle-with-plus::before {
+  content: "";
+}
+
+.ico-circle::before {
+  content: "";
+}
+
+.ico-circular-graph::before {
+  content: "";
+}
+
+.ico-clapperboard::before {
+  content: "";
+}
+
+.ico-clipboard::before {
+  content: "";
+}
+
+.ico-clock::before {
+  content: "";
+}
+
+.ico-code::before {
+  content: "";
+}
+
+.ico-cog::before {
+  content: "";
+}
+
+.ico-colours::before {
+  content: "";
+}
+
+.ico-compass::before {
+  content: "";
+}
+
+.ico-copy::before {
+  content: "";
+}
+
+.ico-credit-card::before {
+  content: "";
+}
+
+.ico-credit::before {
+  content: "";
+}
+
+.ico-cross::before {
+  content: "";
+}
+
+.ico-cup::before {
+  content: "";
+}
+
+.ico-cw::before {
+  content: "";
+}
+
+.ico-cycle::before {
+  content: "";
+}
+
+.ico-database::before {
+  content: "";
+}
+
+.ico-dial-pad::before {
+  content: "";
+}
+
+.ico-direction::before {
+  content: "";
+}
+
+.ico-document::before {
+  content: "";
+}
+
+.ico-documents::before {
+  content: "";
+}
+
+.ico-drink::before {
+  content: "";
+}
+
+.ico-drive::before {
+  content: "";
+}
+
+.ico-drop::before {
+  content: "";
+}
+
+.ico-edit::before {
+  content: "";
+}
+
+.ico-email::before {
+  content: "";
+}
+
+.ico-emoji-happy::before {
+  content: "";
+}
+
+.ico-emoji-neutral::before {
+  content: "";
+}
+
+.ico-emoji-sad::before {
+  content: "";
+}
+
+.ico-erase::before {
+  content: "";
+}
+
+.ico-eraser::before {
+  content: "";
+}
+
+.ico-export::before {
+  content: "";
+}
+
+.ico-eye::before {
+  content: "";
+}
+
+.ico-feather::before {
+  content: "";
+}
+
+.ico-flag::before {
+  content: "";
+}
+
+.ico-flash::before {
+  content: "";
+}
+
+.ico-flashlight::before {
+  content: "";
+}
+
+.ico-flat-brush::before {
+  content: "";
+}
+
+.ico-folder-images::before {
+  content: "";
+}
+
+.ico-folder-music::before {
+  content: "";
+}
+
+.ico-folder-video::before {
+  content: "";
+}
+
+.ico-folder::before {
+  content: "";
+}
+
+.ico-forward::before {
+  content: "";
+}
+
+.ico-funnel::before {
+  content: "";
+}
+
+.ico-game-controller::before {
+  content: "";
+}
+
+.ico-gauge::before {
+  content: "";
+}
+
+.ico-globe::before {
+  content: "";
+}
+
+.ico-graduation-cap::before {
+  content: "";
+}
+
+.ico-grid::before {
+  content: "";
+}
+
+.ico-hair-cross::before {
+  content: "";
+}
+
+.ico-hand::before {
+  content: "";
+}
+
+.ico-heart-outlined::before {
+  content: "";
+}
+
+.ico-heart::before {
+  content: "";
+}
+
+.ico-help-with-circle::before {
+  content: "";
+}
+
+.ico-help::before {
+  content: "";
+}
+
+.ico-home::before {
+  content: "";
+}
+
+.ico-hour-glass::before {
+  content: "";
+}
+
+.ico-image-inverted::before {
+  content: "";
+}
+
+.ico-image::before {
+  content: "";
+}
+
+.ico-images::before {
+  content: "";
+}
+
+.ico-inbox::before {
+  content: "";
+}
+
+.ico-infinity::before {
+  content: "";
+}
+
+.ico-info-with-circle::before {
+  content: "";
+}
+
+.ico-info::before {
+  content: "";
+}
+
+.ico-key::before {
+  content: "";
+}
+
+.ico-keyboard::before {
+  content: "";
+}
+
+.ico-lab-flask::before {
+  content: "";
+}
+
+.ico-landline::before {
+  content: "";
+}
+
+.ico-language::before {
+  content: "";
+}
+
+.ico-laptop::before {
+  content: "";
+}
+
+.ico-leaf::before {
+  content: "";
+}
+
+.ico-level-down::before {
+  content: "";
+}
+
+.ico-level-up::before {
+  content: "";
+}
+
+.ico-lifebuoy::before {
+  content: "";
+}
+
+.ico-light-bulb::before {
+  content: "";
+}
+
+.ico-light-down::before {
+  content: "";
+}
+
+.ico-light-up::before {
+  content: "";
+}
+
+.ico-line-graph::before {
+  content: "";
+}
+
+.ico-link::before {
+  content: "";
+}
+
+.ico-list::before {
+  content: "";
+}
+
+.ico-location-pin::before {
+  content: "";
+}
+
+.ico-location::before {
+  content: "";
+}
+
+.ico-lock-open::before {
+  content: "";
+}
+
+.ico-lock::before {
+  content: "";
+}
+
+.ico-log-out::before {
+  content: "";
+}
+
+.ico-login::before {
+  content: "";
+}
+
+.ico-loop::before {
+  content: "";
+}
+
+.ico-magnet::before {
+  content: "";
+}
+
+.ico-magnifying-glass::before {
+  content: "";
+}
+
+.ico-mail::before {
+  content: "";
+}
+
+.ico-man::before {
+  content: "";
+}
+
+.ico-map::before {
+  content: "";
+}
+
+.ico-mask::before {
+  content: "";
+}
+
+.ico-medal::before {
+  content: "";
+}
+
+.ico-megaphone::before {
+  content: "";
+}
+
+.ico-menu::before {
+  content: "";
+}
+
+.ico-message::before {
+  content: "";
+}
+
+.ico-mic::before {
+  content: "";
+}
+
+.ico-minus::before {
+  content: "";
+}
+
+.ico-mobile::before {
+  content: "";
+}
+
+.ico-modern-mic::before {
+  content: "";
+}
+
+.ico-moon::before {
+  content: "";
+}
+
+.ico-mouse::before {
+  content: "";
+}
+
+.ico-music::before {
+  content: "";
+}
+
+.ico-network::before {
+  content: "";
+}
+
+.ico-new-message::before {
+  content: "";
+}
+
+.ico-new::before {
+  content: "";
+}
+
+.ico-news::before {
+  content: "";
+}
+
+.ico-note::before {
+  content: "";
+}
+
+.ico-notification::before {
+  content: "";
+}
+
+.ico-old-mobile::before {
+  content: "";
+}
+
+.ico-old-phone::before {
+  content: "";
+}
+
+.ico-palette::before {
+  content: "";
+}
+
+.ico-paper-plane::before {
+  content: "";
+}
+
+.ico-pencil::before {
+  content: "";
+}
+
+.ico-phone::before {
+  content: "";
+}
+
+.ico-pie-chart::before {
+  content: "";
+}
+
+.ico-pin::before {
+  content: "";
+}
+
+.ico-plus::before {
+  content: "";
+}
+
+.ico-popup::before {
+  content: "";
+}
+
+.ico-power-plug::before {
+  content: "";
+}
+
+.ico-price-ribbon::before {
+  content: "";
+}
+
+.ico-price-tag::before {
+  content: "";
+}
+
+.ico-print::before {
+  content: "";
+}
+
+.ico-progress-empty::before {
+  content: "";
+}
+
+.ico-progress-full::before {
+  content: "";
+}
+
+.ico-progress-one::before {
+  content: "";
+}
+
+.ico-progress-two::before {
+  content: "";
+}
+
+.ico-publish::before {
+  content: "";
+}
+
+.ico-quote::before {
+  content: "";
+}
+
+.ico-radio::before {
+  content: "";
+}
+
+.ico-reply-all::before {
+  content: "";
+}
+
+.ico-reply::before {
+  content: "";
+}
+
+.ico-retweet::before {
+  content: "";
+}
+
+.ico-rocket::before {
+  content: "";
+}
+
+.ico-round-brush::before {
+  content: "";
+}
+
+.ico-rss::before {
+  content: "";
+}
+
+.ico-ruler::before {
+  content: "";
+}
+
+.ico-scissors::before {
+  content: "";
+}
+
+.ico-share-alternitive::before {
+  content: "";
+}
+
+.ico-share::before {
+  content: "";
+}
+
+.ico-shareable::before {
+  content: "";
+}
+
+.ico-shield::before {
+  content: "";
+}
+
+.ico-shop::before {
+  content: "";
+}
+
+.ico-shopping-bag::before {
+  content: "";
+}
+
+.ico-shopping-basket::before {
+  content: "";
+}
+
+.ico-shopping-cart::before {
+  content: "";
+}
+
+.ico-shuffle::before {
+  content: "";
+}
+
+.ico-signal::before {
+  content: "";
+}
+
+.ico-sound-mix::before {
+  content: "";
+}
+
+.ico-sports-club::before {
+  content: "";
+}
+
+.ico-spreadsheet::before {
+  content: "";
+}
+
+.ico-squared-cross::before {
+  content: "";
+}
+
+.ico-squared-minus::before {
+  content: "";
+}
+
+.ico-squared-plus::before {
+  content: "";
+}
+
+.ico-star-outlined::before {
+  content: "";
+}
+
+.ico-star::before {
+  content: "";
+}
+
+.ico-stopwatch::before {
+  content: "";
+}
+
+.ico-suitcase::before {
+  content: "";
+}
+
+.ico-swap::before {
+  content: "";
+}
+
+.ico-sweden::before {
+  content: "";
+}
+
+.ico-switch::before {
+  content: "";
+}
+
+.ico-tablet::before {
+  content: "";
+}
+
+.ico-tag::before {
+  content: "";
+}
+
+.ico-text-document-inverted::before {
+  content: "";
+}
+
+.ico-text-document::before {
+  content: "";
+}
+
+.ico-text::before {
+  content: "";
+}
+
+.ico-thermometer::before {
+  content: "";
+}
+
+.ico-thumbs-down::before {
+  content: "";
+}
+
+.ico-thumbs-up::before {
+  content: "";
+}
+
+.ico-thunder-cloud::before {
+  content: "";
+}
+
+.ico-ticket::before {
+  content: "";
+}
+
+.ico-time-slot::before {
+  content: "";
+}
+
+.ico-tools::before {
+  content: "";
+}
+
+.ico-traffic-cone::before {
+  content: "";
+}
+
+.ico-tree::before {
+  content: "";
+}
+
+.ico-trophy::before {
+  content: "";
+}
+
+.ico-tv::before {
+  content: "";
+}
+
+.ico-typing::before {
+  content: "";
+}
+
+.ico-unread::before {
+  content: "";
+}
+
+.ico-untag::before {
+  content: "";
+}
+
+.ico-user::before {
+  content: "";
+}
+
+.ico-users::before {
+  content: "";
+}
+
+.ico-v-card::before {
+  content: "";
+}
+
+.ico-video::before {
+  content: "";
+}
+
+.ico-vinyl::before {
+  content: "";
+}
+
+.ico-voicemail::before {
+  content: "";
+}
+
+.ico-wallet::before {
+  content: "";
+}
+
+.ico-water::before {
+  content: "";
+}
+
+.ico-500px-with-circle::before {
+  content: "";
+}
+
+.ico-500px::before {
+  content: "";
+}
+
+.ico-basecamp::before {
+  content: "";
+}
+
+.ico-behance::before {
+  content: "";
+}
+
+.ico-creative-cloud::before {
+  content: "";
+}
+
+.ico-dropbox::before {
+  content: "";
+}
+
+.ico-evernote::before {
+  content: "";
+}
+
+.ico-flattr::before {
+  content: "";
+}
+
+.ico-foursquare::before {
+  content: "";
+}
+
+.ico-google-drive::before {
+  content: "";
+}
+
+.ico-google-hangouts::before {
+  content: "";
+}
+
+.ico-grooveshark::before {
+  content: "";
+}
+
+.ico-icloud::before {
+  content: "";
+}
+
+.ico-mixi::before {
+  content: "";
+}
+
+.ico-onedrive::before {
+  content: "";
+}
+
+.ico-paypal::before {
+  content: "";
+}
+
+.ico-picasa::before {
+  content: "";
+}
+
+.ico-qq::before {
+  content: "";
+}
+
+.ico-rdio-with-circle::before {
+  content: "";
+}
+
+.ico-renren::before {
+  content: "";
+}
+
+.ico-scribd::before {
+  content: "";
+}
+
+.ico-sina-weibo::before {
+  content: "";
+}
+
+.ico-skype-with-circle::before {
+  content: "";
+}
+
+.ico-skype::before {
+  content: "";
+}
+
+.ico-slideshare::before {
+  content: "";
+}
+
+.ico-smashing::before {
+  content: "";
+}
+
+.ico-soundcloud::before {
+  content: "";
+}
+
+.ico-spotify-with-circle::before {
+  content: "";
+}
+
+.ico-spotify::before {
+  content: "";
+}
+
+.ico-swarm::before {
+  content: "";
+}
+
+.ico-vine-with-circle::before {
+  content: "";
+}
+
+.ico-vine::before {
+  content: "";
+}
+
+.ico-vk-alternitive::before {
+  content: "";
+}
+
+.ico-vk-with-circle::before {
+  content: "";
+}
+
+.ico-vk::before {
+  content: "";
+}
+
+.ico-xing-with-circle::before {
+  content: "";
+}
+
+.ico-xing::before {
+  content: "";
+}
+
+.ico-yelp::before {
+  content: "";
+}
+
+.ico-dribbble-with-circle::before {
+  content: "";
+}
+
+.ico-dribbble::before {
+  content: "";
+}
+
+.ico-facebook-with-circle::before {
+  content: "";
+}
+
+.ico-facebook::before {
+  content: "";
+}
+
+.ico-flickr-with-circle::before {
+  content: "";
+}
+
+.ico-flickr::before {
+  content: "";
+}
+
+.ico-github-with-circle::before {
+  content: "";
+}
+
+.ico-github::before {
+  content: "";
+}
+
+.ico-google-with-circle::before {
+  content: "";
+}
+
+.ico-google::before {
+  content: "";
+}
+
+.ico-instagram-with-circle::before {
+  content: "";
+}
+
+.ico-instagram::before {
+  content: "";
+}
+
+.ico-lastfm-with-circle::before {
+  content: "";
+}
+
+.ico-lastfm::before {
+  content: "";
+}
+
+.ico-linkedin-with-circle::before {
+  content: "";
+}
+
+.ico-linkedin::before {
+  content: "";
+}
+
+.ico-pinterest-with-circle::before {
+  content: "";
+}
+
+.ico-pinterest::before {
+  content: "";
+}
+
+.ico-rdio::before {
+  content: "";
+}
+
+.ico-stumbleupon-with-circle::before {
+  content: "";
+}
+
+.ico-stumbleupon::before {
+  content: "";
+}
+
+.ico-tumblr-with-circle::before {
+  content: "";
+}
+
+.ico-tumblr::before {
+  content: "";
+}
+
+.ico-twitter-with-circle::before {
+  content: "";
+}
+
+.ico-twitter::before {
+  content: "";
+}
+
+.ico-vimeo-with-circle::before {
+  content: "";
+}
+
+.ico-vimeo::before {
+  content: "";
+}
+
+.ico-youtube-with-circle::before {
+  content: "";
+}
+
+.ico-youtube::before {
+  content: "";
+}
+
+.header__container {
+  box-shadow: 0 5px 5px 0 rgba(44, 48, 49, 0.1);
+  background: #ffffff;
+  color: #2c3031;
+}
+
+.footer, .content, .header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: left;
+}
+@media (max-width: 1280px) {
+  .footer, .content, .header {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .footer, .content, .header {
+    padding-right: 1em;
+    padding-left: 1em;
+    width: calc(100% - 2em);
+    max-width: none;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+.page {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 6em 1fr 6em;
+  grid-gap: 0;
+  min-height: 100%;
+}
+
+.header__container {
+  grid-area: header;
+}
+
+.content__container {
+  grid-area: main;
+}
+
+.footer__container {
+  grid-area: footer;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.header__container {
+  text-align: center;
+}
+
+.header {
+  padding-top: 2.25em;
+  padding-bottom: 2.25em;
+  max-width: 1200px;
+}
+.header h1 {
+  margin: 0;
+  line-height: 0.5;
+}
+
+.navigation {
+  text-align: right;
+}
+.navigation a {
+  margin-left: 2em;
+}
+
+.content__container {
+  text-align: center;
+  margin-top: 2.25em;
+  margin-bottom: 2.25em;
+}
+
+.footer__container {
+  background: #2c3031;
+  padding: 1em;
+  color: #ffffff;
+}
+
+.footer {
+  max-width: 1200px;
+}
+
+/*# sourceMappingURL=app.css.map */

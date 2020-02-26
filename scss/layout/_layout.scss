@@ -1,0 +1,39 @@
+@use '../config';
+@use '../tools';
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+.page {
+  display: grid;
+  grid-template-areas: 'header'
+        'main'
+        'footer';
+  grid-template-rows: 6em 1fr 6em;
+  grid-gap: 0;
+  min-height: 100%;
+}
+
+.header__container {
+  grid-area: header;
+}
+
+.content__container {
+  grid-area: main;
+}
+
+.footer__container {
+  grid-area: footer;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}

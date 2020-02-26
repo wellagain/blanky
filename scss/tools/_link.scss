@@ -1,0 +1,24 @@
+// Color your links
+// use:
+// @include link($red);
+
+@mixin link(
+  $color,
+  $hover: $color,
+  $underline: underline,
+  $underline-hover: $underline
+) {
+  text-decoration: $underline;
+  color: $color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: $underline-hover;
+    color: $hover;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}

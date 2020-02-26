@@ -1,0 +1,39 @@
+@use 'sass:list';
+
+// An one-liner for position and z-index
+// use:
+// @include position(absolute, 0 auto auto 0, 999)
+
+@mixin position(
+  $position: relative,
+  $coordinates: auto auto auto auto,
+  $zindex: auto
+  ) {
+
+  $top: list.nth($coordinates, 1);
+  $right: list.nth($coordinates, 2);
+  $bottom: list.nth($coordinates, 3);
+  $left: list.nth($coordinates, 4);
+
+  position: $position;
+
+  @if $top != auto {
+    top: $top;
+  }
+
+  @if $right != auto {
+    right: $right;
+  }
+
+  @if $bottom != auto {
+    bottom: $bottom;
+  }
+
+  @if $left != auto {
+    left: $left;
+  }
+
+  @if $zindex != auto {
+    z-index: $zindex;
+  }
+}

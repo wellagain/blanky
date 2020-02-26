@@ -1,0 +1,29 @@
+// Define screen sizes for
+// @mixin breakpoint(...)
+
+$mobile-breakpoint:            480px;
+$tablet-portrait-breakpoint:   768px;
+$tablet-breakpoint:            1024px;
+$desktop-breakpoint:           1280px;
+$huge-breakpoint:              1440px;
+$screen-height:                 730px;
+
+$breakpoints: (
+  'mobile-up': (min-width: $mobile-breakpoint + 1),
+  'portrait-up': (min-width: $tablet-portrait-breakpoint + 1),
+  'tablet-up': (min-width: $tablet-breakpoint + 1),
+  'desktop-up': (min-width: $desktop-breakpoint + 1),
+  'huge-up': (min-width: $huge-breakpoint + 1),
+
+  'huge-down': (max-width: $huge-breakpoint),
+  'desktop-down': (max-width: $desktop-breakpoint),
+  'tablet-down': (max-width: $tablet-breakpoint),
+  'portrait-down': (max-width: $tablet-portrait-breakpoint),
+  'mobile-down': (max-width: $mobile-breakpoint),
+
+  'portrait': (min-width: $tablet-portrait-breakpoint + 1, max-width: $tablet-breakpoint),
+  'tablet': (min-width: $tablet-breakpoint + 1, max-width: $desktop-breakpoint),
+  'desktop': (min-width: $desktop-breakpoint + 1, max-width: $huge-breakpoint),
+
+  'widescreen': (max-height: $screen-height),
+);
