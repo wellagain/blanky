@@ -5,14 +5,14 @@ $leading:     1.5;
 
 $rhythm:      #{1.5 * $leading + 'em'};
 
-
+$corner:      .2em;
 
 $white:       #ffffff;
 $black:       #2c3031;
 $link:        #1c6d81;
 
 
-$shadow: 0 5px 5px 0 color.scale($black, $alpha: -90%);
+$shadow: 0 5px 5px 0 color.adjust($black, $alpha: -.9%);
 
 
 $container:   1200px;

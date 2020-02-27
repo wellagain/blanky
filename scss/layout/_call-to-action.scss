@@ -1,0 +1,85 @@
+@use 'sass:color';
+@use '../config';
+@use '../tools';
+
+%button {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: .2em;
+  -webkit-appearance: none;
+  width: auto;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@mixin button-size(
+  $font-size: 1em,
+  $padding: 1em,
+  $corner-radius: 0
+  ) {
+  position: relative;
+  border-radius: $corner-radius;
+  padding: $padding;
+  font-size: $font-size;
+}
+
+// button skins
+@mixin button-skin(
+  $bg,
+  $text: color.invert($bg),
+  $hoverable: true
+) {
+  @if $hoverable == true {
+    // override all underlines
+    // scss-lint:disable ImportantRule
+    position: relative;
+    transition: all .2s ease;
+    border: 0;
+    box-shadow: 0 -.1em 0 0 color.adjust($bg, $lightness: -10%) inset,
+                0 2px 3px 0 color.adjust($bg, $lightness: -50%, $alpha: -.8);
+    background: $bg;
+    text-decoration: none !important;
+    color: $text;
+
+    &:hover,
+    &:enabled:hover {
+      box-shadow: 0 -.1em 0 0 color.adjust($bg, $lightness: -10%) inset,
+                  0 2px 5px 0 color.adjust($bg, $lightness: -50%, $alpha: -.8);
+      background: color.adjust($bg, $lightness: 5%);
+      color: $text;
+    }
+
+    &:active,
+    &:focus {
+      top: 1px;
+      box-shadow: 0 0 0 0 color.adjust($bg, $lightness: -10%) inset,
+                  0 0 2px 0 color.adjust($bg, $lightness: -50%, $alpha: -.8);
+      background: color.adjust($bg, $lightness: -10%);
+      color: $text;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  } @else {
+    background: $bg;
+    cursor: default;
+    color: $text;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: $bg;
+      cursor: default;
+      color: $text;
+    }
+  }
+}
+
+.button {
+  @extend %button;
+  @include button-size(1.2em, .5em 1em, config.$corner);
+  @include button-skin(config.$link, config.$white);
+}
