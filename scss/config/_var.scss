@@ -1,19 +1,34 @@
 @use 'sass:color';
 
 
-$leading:     1.5;
+$leading:                     1.5;
 
-$rhythm:      #{1.5 * $leading + 'em'};
+$rhythm:                      #{1.5 * $leading + 'em'};
 
-$corner:      .2em;
+$corner:                      .2em;
 
-$white:       #ffffff;
-$black:       #2c3031;
-$link:        #1c6d81;
-
-
-$shadow: 0 5px 5px 0 color.adjust($black, $alpha: -.9%);
+$white:                       #ffffff;
+$black:                       #2c3031;
+$blue:                        #1c6d81;
 
 
-$container:   1200px;
-$copywidth:   55ch
+
+$link:                        $blue;
+
+
+$shadow:                      0 5px 5px 0 color.adjust($black, $alpha: -.9%);
+
+
+$container:                   1200px;
+$copywidth:                   55ch;
+
+
+$input-border-color:          color.adjust($black, $blue: 50);
+$input-bg-color:              $white;
+$input-color:                 $black;
+$input-corner:                0;
+$input-border-color-forcus:   $blue;
+$input-bg-color-forcus:       $white;
+$input-border-color-disabled: color.adjust($black, $lightness: 70%);
+$input-bg-color-disabled:     color.adjust($white, $lightness: -5%);
+$input-color-disabled:        color.adjust($black, $lightness: 40%);

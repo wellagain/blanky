@@ -1,0 +1,144 @@
+@use '../tools';
+@use '../config';
+
+%form-control {
+  border: 1px solid config.$input-border-color;
+  border-radius: config.$input-corner;
+  background: config.$input-bg-color;
+  padding: .75em 1em;
+  max-width: 100%;
+  line-height: 1;
+  color: config.$input-color;
+  font-size: 1rem;
+
+  &:focus {
+    outline: 0;
+    border: 1px solid config.$input-border-color-forcus;
+    background-color: config.$input-bg-color-forcus;
+  }
+
+  &:disabled {
+    border: 1px solid config.$input-border-color-disabled;
+    background-color: config.$input-bg-color-disabled;
+    color: config.$input-color-disabled;
+  }
+}
+
+%label {
+  display: block;
+  margin: 0 0 .3em;
+  line-height: 1.5;
+  color: inherit;
+  font-size: 1em;
+}
+
+%checkbox-radio {
+  position: absolute;
+  left: -9999px;
+  font-size: 1rem;
+
+  + label {
+    display: inline-block;
+    position: relative;
+    vertical-align: baseline;
+
+    &::before {
+      display: inline-block;
+      position: relative;
+      margin-right: .4em;
+      border: 1px solid config.$input-border-color;
+      background: config.$input-bg-color;
+      width: 1em;
+      height: 1em;
+      vertical-align: text-bottom;
+      text-align: center;
+      cursor: pointer;
+      content: '';
+    }
+  }
+
+  &:checked + label {
+    &::before {
+      border-color: config.$input-border-color-forcus;
+      background: config.$input-border-color-forcus;
+    }
+
+    &::after {
+      @extend %icon;
+    }
+  }
+
+  &:disabled + label::before {
+    border-color: config.$input-border-color-disabled;
+    background: config.$input-bg-color-disabled;
+    color: config.$input-color-disabled;
+  }
+}
+
+%checkbox {
+  &:checked + label::after {
+    @include tools.position(absolute, 25% auto auto 2%);
+    line-height: 1;
+    color: config.$white;
+    content: tools.icon(check);
+  }
+
+  &:checked:disabled + label::after {
+    color: config.$input-color-disabled;
+  }
+}
+
+%radio {
+  + label {
+    border-radius: 50%;
+
+    &::before {
+      border-radius: 50%;
+    }
+  }
+
+  &:checked + label::after {
+    @include tools.position(absolute, 42% auto auto 10%);
+    border-radius: 50%;
+    background: config.$white;
+    width: .5em;
+    height: .5em;
+    content: '';
+  }
+
+  &:checked:disabled + label::after {
+    background: config.$input-color-disabled
+  }
+}
+
+
+.form-control {
+  display: block;
+  margin-bottom: 1em;
+
+  label {
+    @extend %label;
+    display: block;
+  }
+}
+
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='tel'],
+input[type='password'],
+input[type='date'],
+textarea,
+select {
+  @extend %form-control;
+}
+
+.form-checkbox input {
+  @extend %checkbox-radio;
+  @extend %checkbox;
+}
+
+.form-radio input {
+  @extend %checkbox-radio;
+  @extend %radio;
+}
